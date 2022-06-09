@@ -90,3 +90,17 @@ const setScore = (score) => {
     SCORE = score;
     document.querySelector(".score h1").innerText = score;
 }
+
+const openRules = () => {
+    let openRules = document.querySelector('.rules');
+    openRules.style.transform = "translate(-50%, -50%) scale(1)";
+    let overlayTrue = document.querySelector('.overlay');
+    overlayTrue.style.transform = "scale(1)";
+}
+
+const closeRules = () => {
+   let closeRules = document.querySelector('.rules');
+   closeRules.style.transform = "scale(0)";
+   let overlayFalse = document.querySelector('.overlay');
+    overlayFalse.style.transform = "translate(-50%, -50%) scale(0)";
+}

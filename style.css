@@ -130,7 +130,7 @@ body {
 }
 
 .referee p {
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 30px;
     font-weight: 600;
     color: white;
@@ -150,6 +150,71 @@ body {
 .referee button:hover {
     background-color: bisque;
     color: hsl(349, 71%, 52%);
+}
+
+.rulesButton {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: transparent;
+    padding: 6px 30px;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: .26s;
+    cursor: pointer;
+}
+
+.rulesButton:hover {
+    color: #131537;
+    background: #fff;
+    box-shadow: 0, 0, 20px, #fff;
+}
+
+.rules {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: .8s;
+    z-index: 4;
+}
+
+.header img {
+    cursor: pointer;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.rules .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rules .image-rule {
+    margin-top: 50px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -264,4 +329,22 @@ body {
 .referee p {
     font-size: 20px;
 }
+
+.rulesButton {
+    bottom: 15%;
+    width: 40%;
+    left: 30%;
+    right: 30%;
+}
+
+}
+
+@media (max-width:420px) {
+    .rules {
+        width: 80%;
+        height: 350px;
+    }
+    .rules .image-rule img {
+        width: 200px;
+    }
 }
